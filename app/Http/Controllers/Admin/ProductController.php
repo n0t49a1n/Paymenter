@@ -54,7 +54,7 @@ class ProductController extends Controller
             'description' => 'required|string',
             'price' => 'required',
             'category_id' => 'required|integer',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5242',
+            'image' => 'image|mimes:webp,jpeg,png,jpg,gif,svg|max:5242',
         ]);
         if ($request->get('no_image')) {
             $data['image'] = 'null';
@@ -86,7 +86,7 @@ class ProductController extends Controller
             'name' => 'required|string',
             'description' => 'required|string',
             'category_id' => 'required|integer',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5242',
+            'image' => 'image|mimes:webp,jpeg,png,jpg,gif,svg|max:5242',
             'stock' => 'integer|required_if:stock_enabled,true',
             'stock_enabled' => 'boolean',
             'hidden' => 'boolean',
