@@ -51,7 +51,7 @@ class CategoryController extends Controller
 
         if ($request->hasFile('image')) {
             $request->validate([
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5242',
+                'image' => 'image|mimes:webp,jpeg,png,jpg,gif,svg|max:5242',
             ]);
             // Public
             $request->image->store('categories', 'public');
@@ -103,7 +103,7 @@ class CategoryController extends Controller
 
         if ($request->hasFile('image')) {
             $request->validate([
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5242',
+                'image' => 'image|mimes:webp,jpeg,png,jpg,gif,svg|max:5242',
             ]);
             // Public
             $request->image->store('categories', 'public');
